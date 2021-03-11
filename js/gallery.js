@@ -1,3 +1,5 @@
+import image from './gallery-items.js'
+
 {/* <li class="gallery__item">
   <a
     class="gallery__link"
