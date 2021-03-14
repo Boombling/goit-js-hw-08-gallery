@@ -27,6 +27,7 @@ function openImageInModal(image, alt) {
 function onCloseModal() {
     window.removeEventListener('keydown', onEscPress);
     refs.opneModal.classList.remove("is-open");
+    onRemoveModalImage()
 };
   
 function onEscPress(event) {
@@ -40,4 +41,8 @@ function onBackdropClick(event) {
     if (event.currentTarget === event.target) {
       onCloseModal()
   }
+}
+function onRemoveModalImage(src = "", alt = "") {
+    refs.imageEl.src = src;
+    refs.imageEl.alt = alt;
 }
